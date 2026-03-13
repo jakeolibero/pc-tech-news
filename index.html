@@ -3,260 +3,242 @@
 
 <head>
 
+<!-- Configuración básica -->
 <meta charset="UTF-8">
-<meta name="description" content="Noticias y guía sobre componentes de computadoras">
-<meta name="keywords" content="PC, componentes, CPU, GPU, RAM, SSD, tecnología">
-<meta name="author" content="Victor">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PC Tech News</title>
+<title>Componentes de PC</title>
 
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/2721/2721297.png">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
+<!-- Conectar CSS -->
 <link rel="stylesheet" href="style.css">
+
+<!-- Librería para la gráfica -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
-<body onload="saludo()">
+<body>
 
-<!-- NAVBAR -->
+<!-- ENCABEZADO -->
+<header>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<h1>Componentes de Computadoras</h1>
+<p>Página educativa sobre hardware</p>
 
-<div class="container">
+<!-- Botón modo oscuro -->
+<button onclick="modoOscuro()">Modo Oscuro</button>
 
-<a class="navbar-brand" href="#">PC Tech News</a>
+</header>
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
 
-<div class="collapse navbar-collapse" id="menu">
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav>
 
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item"><a class="nav-link" href="#componentes">Componentes</a></li>
-
-<li class="nav-item"><a class="nav-link" href="#armar">Armar PC</a></li>
-
-<li class="nav-item"><a class="nav-link" href="#noticias">Noticias</a></li>
-
-<li class="nav-item"><a class="nav-link" href="#video">Video</a></li>
-
-<li class="nav-item"><a class="nav-link" href="#ubicacion">Ubicación</a></li>
-
-<li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-
-</ul>
-
-<button onclick="modoOscuro()" class="btn btn-primary ms-3">
-Modo Oscuro
-</button>
-
-</div>
-
-</div>
+<a href="#componentes">Componentes</a>
+<a href="#armarpc">Cómo armar una PC</a>
+<a href="#noticias">Noticias</a>
+<a href="#video">Video</a>
+<a href="#ubicacion">Ubicación</a>
+<a href="#contacto">Contacto</a>
+<a href="#privacidad">Privacidad</a>
 
 </nav>
 
-<!-- TITULO -->
 
-<div class="container text-center mt-5">
+<div class="container">
 
-<h1>PC Tech News</h1>
 
-<p>Noticias y guía sobre componentes de computadoras</p>
+<!-- SECCIÓN COMPONENTES -->
+<section id="componentes">
 
-</div>
+<h2>Componentes principales</h2>
 
-<!-- CARRUSEL -->
+<div class="cards">
 
-<div id="carouselExample" class="carousel slide container mt-4">
+<div class="card">
 
-<div class="carousel-inner">
+<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7">
 
-<div class="carousel-item active">
-<img src="https://images.unsplash.com/photo-1591799265444-d66432b91588" class="d-block w-100">
-</div>
+<h3>Procesador</h3>
 
-<div class="carousel-item">
-<img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7" class="d-block w-100">
-</div>
-
-<div class="carousel-item">
-<img src="https://images.unsplash.com/photo-1593642532400-2682810df593" class="d-block w-100">
-</div>
+<button onclick="cpu()">Ver información</button>
 
 </div>
 
-<button class="carousel-control-prev" data-bs-target="#carouselExample" data-bs-slide="prev">
-<span class="carousel-control-prev-icon"></span>
-</button>
 
-<button class="carousel-control-next" data-bs-target="#carouselExample" data-bs-slide="next">
-<span class="carousel-control-next-icon"></span>
-</button>
+<div class="card">
 
-</div>
+<img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de">
 
-<!-- COMPONENTES -->
+<h3>Memoria RAM</h3>
 
-<section id="componentes" class="container mt-5">
-
-<h2 class="text-center">Componentes de una PC</h2>
-
-<div class="row mt-4">
-
-<div class="col-md-3 text-center">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3659/3659898.png" width="120">
-
-<h4>Procesador</h4>
-
-<p>El CPU es el cerebro de la computadora y ejecuta los programas.</p>
+<button onclick="ram()">Ver información</button>
 
 </div>
 
-<div class="col-md-3 text-center">
 
-<img src="https://cdn-icons-png.flaticon.com/512/1055/1055687.png" width="120">
+<div class="card">
 
-<h4>Memoria RAM</h4>
+<img src="https://images.unsplash.com/photo-1591488320449-011701bb6704">
 
-<p>Permite que los programas funcionen de manera rápida.</p>
+<h3>Tarjeta Gráfica</h3>
 
-</div>
-
-<div class="col-md-3 text-center">
-
-<img src="https://cdn-icons-png.flaticon.com/512/3659/3659899.png" width="120">
-
-<h4>Tarjeta Gráfica</h4>
-
-<p>Procesa los gráficos en juegos y aplicaciones.</p>
+<button onclick="gpu()">Ver información</button>
 
 </div>
 
-<div class="col-md-3 text-center">
 
-<img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" width="120">
+<div class="card">
 
-<h4>SSD</h4>
+<img src="https://images.unsplash.com/photo-1591799265444-d66432b91588">
 
-<p>Unidad de almacenamiento rápida para el sistema.</p>
+<h3>SSD</h3>
+
+<button onclick="ssd()">Ver información</button>
 
 </div>
 
 </div>
+
+<!-- Caja donde aparece la información -->
+<div id="info" class="info-box"></div>
 
 </section>
 
-<!-- COMO ARMAR PC -->
 
-<section id="armar" class="container mt-5">
 
-<h2 class="text-center">Cómo armar tu PC</h2>
+<!-- SECCIÓN GRÁFICA -->
+<section>
 
-<ol class="mt-4">
+<h2>Precios aproximados de componentes</h2>
 
-<li>Instalar el procesador</li>
-
-<li>Instalar la memoria RAM</li>
-
-<li>Colocar el SSD</li>
-
-<li>Instalar la tarjeta gráfica</li>
-
-<li>Conectar la fuente de poder</li>
-
-<li>Encender la computadora</li>
-
-</ol>
+<canvas id="grafica"></canvas>
 
 </section>
 
-<!-- VIDEO -->
 
-<section id="video" class="container mt-5 text-center">
 
-<h2>Video: Cómo armar una PC</h2>
+<!-- SECCIÓN ARMAR PC -->
+<section id="armarpc">
 
-<iframe width="560" height="315"
+<h2>Cómo armar una PC</h2>
 
-src="https://www.youtube.com/embed/BL4DCEp7blY"
+<button onclick="paso1()">Paso 1</button>
+<button onclick="paso2()">Paso 2</button>
+<button onclick="paso3()">Paso 3</button>
+<button onclick="paso4()">Paso 4</button>
 
-allowfullscreen>
+<p id="armado"></p>
 
-</iframe>
+<h3>Video explicativo</h3>
+
+<iframe src="https://www.youtube.com/embed/IhX0fOUYd8Q"></iframe>
 
 </section>
+
+
 
 <!-- NOTICIAS -->
+<section id="noticias">
 
-<section id="noticias" class="container mt-5">
+<h2>Noticias de tecnología</h2>
 
-<h2 class="text-center">Noticias de Tecnología</h2>
+<div class="news">
+<h3>Nuevas tarjetas gráficas</h3>
+<p>Las nuevas GPU ofrecen mayor rendimiento para juegos.</p>
+</div>
 
-<ul class="mt-4">
-
-<li>Nuevas tarjetas gráficas RTX con mayor rendimiento.</li>
-
-<li>Los SSD ahora alcanzan velocidades récord.</li>
-
-<li>Nuevos procesadores más eficientes.</li>
-
-</ul>
-
-</section>
-
-<!-- UBICACION -->
-
-<section id="ubicacion" class="container mt-5 text-center">
-
-<h2>Ubicación UNPHU</h2>
-
-<iframe
-
-src="https://www.google.com/maps?q=UNPHU&output=embed"
-
-width="600"
-
-height="450">
-
-</iframe>
+<div class="news">
+<h3>SSD más rápidos</h3>
+<p>Los SSD NVMe mejoran la velocidad del sistema.</p>
+</div>
 
 </section>
 
-<!-- REDES -->
 
-<section class="container text-center mt-5">
 
-<h2>Redes Sociales</h2>
+<!-- VIDEO -->
+<section id="video">
 
-<a href="#"><i class="bi bi-instagram"></i> Instagram</a><br>
+<h2>Video sobre componentes</h2>
 
-<a href="#"><i class="bi bi-facebook"></i> Facebook</a><br>
-
-<a href="#"><i class="bi bi-tiktok"></i> TikTok</a>
+<iframe src="https://www.youtube.com/embed/yF5xtcLjTMo"></iframe>
 
 </section>
 
-<footer class="text-center mt-5 p-4 bg-dark text-white">
 
-<p>Proyecto educativo - PC Tech News</p>
 
-<a href="privacidad.html">Políticas de Privacidad</a>
+<!-- UBICACIÓN -->
+<section id="ubicacion">
+
+<h2>Ubicación de la UNPHU</h2>
+
+<iframe src="https://maps.google.com/maps?q=unphu%20santo%20domingo&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+
+
+<!-- CONTACTO -->
+<section id="contacto">
+
+<h2>Formulario de contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+<br><br>
+
+<input type="email" placeholder="Correo">
+<br><br>
+
+<textarea placeholder="Mensaje"></textarea>
+<br><br>
+
+<button>Enviar</button>
+
+</form>
+
+</section>
+
+
+
+<!-- POLÍTICA DE PRIVACIDAD -->
+<section id="privacidad">
+
+<h2>Política de Privacidad</h2>
+
+<p>
+Esta página es un proyecto educativo sobre componentes de computadoras.
+La información proporcionada en el formulario de contacto no se comparte con terceros.
+Los datos solo se utilizan con fines educativos.
+</p>
+
+<p>
+El contenido de esta página está destinado únicamente para aprendizaje y práctica de desarrollo web.
+</p>
+
+</section>
+
+
+
+<!-- GIF -->
+<img class="gojo" src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif">
+
+
+</div>
+
+
+<!-- PIE DE PÁGINA -->
+<footer>
+
+<p>Página creada para proyecto educativo</p>
 
 </footer>
 
-<script src="script.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Conectar JavaScript -->
+<script src="script.js"></script>
 
 </body>
 </html>
